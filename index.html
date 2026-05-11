@@ -26,19 +26,19 @@
     </main>
 
     <footer>
-        <p>friday, may 8th | 3:28 PM</p>
+        <p id="clock">friday, may 8th | 3:28 PM</p>
     </footer>
 
-<script>
-    function updateClock() {
-        const now = new Date();
-        const options = { weekday: 'long', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true };
-        document.getElementById('clock').innerHTML = now.toLocaleString('en-US', options).toLowerCase();
-    }
-    // Update it every second
-    setInterval(updateClock, 1000);
-    updateClock(); // Run it immediately
-</script>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const options = { weekday: 'long', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true };
+            document.getElementById('clock').innerHTML = now.toLocaleString('en-US', options).toLowerCase();
+        }
+        // Update it every second
+        setInterval(updateClock, 1000);
+        updateClock(); // Run it immediately
+    </script>
 
 </body>
 </html>
